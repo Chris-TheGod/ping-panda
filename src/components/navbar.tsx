@@ -1,6 +1,7 @@
 import Link from "next/link"
 import MaxWidthWrapper from "./max-with-wrapper"
 import { SignOutButton } from "@clerk/nextjs"
+import { Button } from "./ui/button"
 
 export default function Navbar() {
   const user = false
@@ -17,7 +18,7 @@ export default function Navbar() {
             {user ? (
               <>
                 <SignOutButton>
-                  <button></button>
+                  <Button>Sign out</Button>
                 </SignOutButton>
               </>
             ) : null}
