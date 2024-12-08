@@ -81,16 +81,6 @@ export default function MockDiscordUI({ children }: PropsWithChildren) {
               />
               <span className="font-medium">PingBot</span>
             </div>
-            <div className="flex items-center px-2 py-1.5 rounded  text-white cursor-pointer mt-1 hover:bg-[#393c43] ">
-              <Image
-                src="/ricardo.jpg"
-                alt="PingPanda Avatar"
-                width={32}
-                height={32}
-                className="object-cover rounded-full mr-3"
-              />
-              <span className="font-medium">Ricardo</span>
-            </div>
 
             <div className="my-1 space-y-px">
               {[...Array(4)].map((_, i) => (
@@ -99,7 +89,7 @@ export default function MockDiscordUI({ children }: PropsWithChildren) {
                   className="flex items-center px-2 py-1.5 rounded text-gray-600 cursor-not-allowed"
                 >
                   <div className="size-8 rounded-full bg-discord-background mr-3" />
-                  <span className="font-medium">User {i + 3}</span>
+                  <span className="font-medium">User {i + 2}</span>
                 </div>
               ))}
             </div>

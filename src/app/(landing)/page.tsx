@@ -67,7 +67,7 @@ export default function Home() {
                     avatarSrc="/brand-asset-profile-picture.png"
                     avatarAlt="PingBot avatar"
                     username="PingBot"
-                    timeStamp="Today at 12:35 PM"
+                    timeStamp="Today at 9:35 PM"
                     badgeText="Revenue"
                     badgeColor="#faa61a"
                     title="💰 Payment received"
@@ -88,6 +88,19 @@ export default function Home() {
                     content={{
                       name: "Martin Smith",
                       email: "msmith88@gmail.com",
+                    }}
+                  />
+                  <DiscordMessage
+                    avatarSrc="/brand-asset-profile-picture.png"
+                    avatarAlt="PingBot avatar"
+                    username="PingBot"
+                    timeStamp="Today at 5:11 AM"
+                    badgeText="Milestone"
+                    badgeColor="#5865f2"
+                    title="🚀 Revenue Milestone Achieved"
+                    content={{
+                      recurringRevenue: "$5.000 USD",
+                      growth: "+17,9%",
                     }}
                   />
                 </AnimatedList>
