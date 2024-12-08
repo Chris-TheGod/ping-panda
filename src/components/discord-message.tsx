@@ -1,4 +1,5 @@
 import { cn } from "@/utils"
+import { Clock } from "lucide-react"
 import Image from "next/image"
 
 interface DiscordMessageProps {
@@ -68,9 +69,25 @@ export default function DiscordMessage({
                   "inline-flex order-2 items-center rounded-md px-2 py-1 text-xs font-medium ring-1 ring-inset",
                   getBadgeStyles("#faa61a")
                 )}
-              ></span>
+              >
+                {badgeText}
+              </span>
             ) : null}
+            <p className="text-white order-1 text-base/7 font-semibold">
+              {title}
+            </p>
           </div>
+
+          {Object.entries(content).map(([key, value]) => (
+            <p key={key} className="text-[#dcddde] text-sm/6">
+              <span className="text-[#b9bbbe]">{key}:</span> {value}
+            </p>
+          ))}
+
+          <p className="text-[#72767d] text-xs mt-2 flex items-center">
+            <Clock className="size-3 mr-1" />
+            {timeStamp}
+          </p>
         </div>
       </div>
     </div>

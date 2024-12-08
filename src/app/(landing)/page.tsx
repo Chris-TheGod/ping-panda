@@ -76,6 +76,19 @@ export default function Home() {
                       email: "johndoe1980@gmail.com",
                     }}
                   />
+                  <DiscordMessage
+                    avatarSrc="/brand-asset-profile-picture.png"
+                    avatarAlt="PingBot avatar"
+                    username="PingBot"
+                    timeStamp="Today at 12:35 PM"
+                    badgeText="SignUp"
+                    badgeColor="#43b581"
+                    title="👤 New user signed up"
+                    content={{
+                      name: "John Doe",
+                      email: "johndoe1980@gmail.com",
+                    }}
+                  />
                 </AnimatedList>
               </MockDiscordUI>
             </div>
