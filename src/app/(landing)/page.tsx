@@ -68,12 +68,13 @@ export default function Home() {
                     avatarAlt="PingBot avatar"
                     username="PingBot"
                     timeStamp="Today at 12:35 PM"
-                    badgeText="SignUp"
-                    badgeColor="#43b581"
-                    title="👤 New user signed up"
+                    badgeText="Revenue"
+                    badgeColor="#faa61a"
+                    title="💰 Payment received"
                     content={{
-                      name: "John Doe",
-                      email: "johndoe1980@gmail.com",
+                      amount: "$99.99",
+                      email: "zoe.gonzalez1994@outlook.com",
+                      plan: "PRO",
                     }}
                   />
                   <DiscordMessage
@@ -85,8 +86,8 @@ export default function Home() {
                     badgeColor="#43b581"
                     title="👤 New user signed up"
                     content={{
-                      name: "John Doe",
-                      email: "johndoe1980@gmail.com",
+                      name: "Martin Smith",
+                      email: "msmith88@gmail.com",
                     }}
                   />
                 </AnimatedList>
