@@ -10,6 +10,21 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
 import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism"
 
 export default function Home() {
+  const codeSnippet = `await fetch("http://localhost:3000/api/v1/events", {
+  method: "POST",
+  body: JSON.stringify({
+    category: "sale",
+    fields: {
+      plan: "PRO",
+      email: "zoe.martinez2001@email.com",
+      amount: 49.00
+    }
+  }),
+  headers: {
+    Authorization: "Bearer <YOUR_API_KEY>"
+  }
+})`
+
   return (
     <>
       <section className="relative py-24 sm:py-32 bg-brand-25">
@@ -233,11 +248,31 @@ export default function Home() {
                     </div>
 
                     <div className="overflow-hidden">
-                      <div className="max-h-[30rem]"></div>
+                      <div className="max-h-[30rem]">
+                        <SyntaxHighlighter
+                          language="typescript"
+                          style={{
+                            ...oneDark,
+                            'pre[class*="language-"]': {
+                              ...oneDark['pre[class*="language-"]'],
+                              background: "transparent",
+                              overflow: "hidden",
+                            },
+                            'code[class*="language-"]': {
+                              ...oneDark['code[class*="language-"]'],
+                              background: "transparent",
+                            },
+                          }}
+                        >
+                          {codeSnippet}
+                        </SyntaxHighlighter>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
+
+              <div className="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 max-lg:rounded-b-[2rem] lg:rounded-r-[2rem]" />
             </div>
           </div>
         </MaxWidthWrapper>
