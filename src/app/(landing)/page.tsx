@@ -109,7 +109,39 @@ export default function Home() {
           </MaxWidthWrapper>
         </div>
       </section>
-      <section></section>
+      <section className="relative py-24 sm:py-32 bg-brand-25">
+        <MaxWidthWrapper className="flex flex-col items-center gap-16 sm:gap-20">
+          <div>
+            <h2 className="text-center text-base/7 font-semibold text-brand-600">
+              Intuitive Monitoring
+            </h2>
+            <Heading>Stay ahead with real-time insights</Heading>
+          </div>
+
+          <div className="grid gap-4 lg:grid-cols-3 lg:grid-rows-2">
+            {/* first bento grid element */}
+            <div className="relative lg:row-span-2">
+              <div className="absolute inset-px rounded-lg bg-white lg:rounded-l-[2rem]" />
+
+              <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
+                <div className="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
+                  <p className="mt-2 text-lg/7 font-medium tracking-tight text-brand-950 max-lg:text-center">
+                    Real time notifications
+                  </p>
+                  <p className="mt-2 max-w-l text-sm/6 text-gray-600 max-lg:text-center">
+                    Get notified about critical events the moment they happen,
+                    no matter if you're at home or on the go.
+                  </p>
+                </div>
+
+                <div className="relative min-h-[30rem] w-full grow [container-type:inline-size] max-lg:mx-auto max-lg:max-w-sm">
+                  <div className="absolute inset-x-10 bottom-0 top-10 overflow-hidden rounded-t-[12cqw]"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </MaxWidthWrapper>
+      </section>
       <section></section>
     </>
   )
