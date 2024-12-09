@@ -5,6 +5,7 @@ import ShinyButton from "@/components/shiny-button"
 import MockDiscordUI from "@/components/mock-discord-ui"
 import { AnimatedList } from "@/components/AnimatedList"
 import DiscordMessage from "@/components/discord-message"
+import Image from "next/image"
 
 export default function Home() {
   return (
@@ -135,10 +136,21 @@ export default function Home() {
                 </div>
 
                 <div className="relative min-h-[30rem] w-full grow [container-type:inline-size] max-lg:mx-auto max-lg:max-w-sm">
-                  <div className="absolute inset-x-10 bottom-0 top-10 overflow-hidden rounded-t-[12cqw]"></div>
+                  <div className="absolute inset-x-10 bottom-0 top-10 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 shadow-2xl">
+                    <Image
+                      className="size-full object-cover object-top"
+                      src="/phone-screen.png"
+                      alt="Phone screen with PingPanda notifications"
+                      fill
+                    />
+                  </div>
                 </div>
               </div>
+
+              <div className="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 lg:rounded-l-[2rem]" />
             </div>
+
+            {/* second bento grid element */}
           </div>
         </MaxWidthWrapper>
       </section>
