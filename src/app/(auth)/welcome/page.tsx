@@ -7,10 +7,12 @@ import { useQuery } from "@tanstack/react-query"
 import { LucideProps } from "lucide-react"
 
 export default function Page() {
-  const {} = useQuery({
-    queryFn: () => {
-      client
+  const { data } = useQuery({
+    queryFn: async () => {
+      const res = await client.auth.getDatabaseSyncStatus.$get()
+      return await res.json()
     },
+    queryKey: ["get-database-sync-status"],
   })
 
   return (
